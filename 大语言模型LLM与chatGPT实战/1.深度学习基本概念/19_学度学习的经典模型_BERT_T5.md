@@ -1,20 +1,38 @@
 
 
-# BERT
-
 > tensorflow - 已不流行了, 现在主流的都是使用pytorch
 >
-> 虽然现在被替代，但是影响力巨大。
+> bert虽然现在被替代，但是影响力巨大。
+>
+> bert只有12层的decoder
+>
+> 2018年论文出来之后，在T5出来之前，Bert发挥了大作用。
 
 
 
-**Paper:** **Pre-training** of **Deep Birdirectional Transformers** for **Language Understanding**
+# 基本信息
 
-**Name:** Birdrectional Encoder Representation from Transformers
+**Paper:** <font color=red>Pre-training</font> of  <font color=red> Deep Birdirectional Transformers</font> for <font color=red> Language Understanding</font>
+
+**full name:**  Bidirectional Encoder Representation from Transformers
+
+> Bidirectional : 双向的
+>
+> 从名字可以看出：BERT模型的基本框架用的是 Transformer 中的 Encoder block (12层Encoder）。BERT模型的目标是利用大规模无标注语料训练、获得文本的包含丰富语义信息的Representation，即：文本的语义表示，然后将文本的语义表示在特定NLP任务中作微调，最终应用于该NLP任务。
+>
+> BERT模型是一个两阶段模型，第一阶段 pre-training，第二阶段 fine-tuning。
+>
+> ----
+>
+> 在预训练阶段，模型有两个任务，即Masked Language Model (简称MLM) 和Next Sentence Prediction (简称NSP)
+>
+> 
 
 ---
 
-**Pre-training**：通过大量的数据预训练得到的通用模型，后续基于通用模型进行微调。
+## 特点
+
+**Pre-training**：通过大量的数据预训练得到的通用模型，后续基于通用模型进行微调 （预训练的结果输出：就是由多个这样的 Encoder 结构堆叠而成）。
 
 **Deep**： BERT-base采用12层Encoder， 层数更深。
 
@@ -27,6 +45,12 @@
 **Self-supervised Learning**: 通过设计合理的训练任务，实现使用大量无监督数据进行训练。
 
 > GPT包括BERT开启了一个时代，进入了Pre-training阶段
+
+
+
+# 拓展分享
+
+>  BERT源码解说
 
 
 
