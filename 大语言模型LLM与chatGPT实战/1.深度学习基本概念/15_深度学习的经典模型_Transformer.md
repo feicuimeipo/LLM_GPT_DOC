@@ -187,6 +187,8 @@ Embedding会提取重要的两个信息： 词的意思 （Input Embedding）、
 
 ### 处理流程
 
+#### 送词入模型
+
 首先将每个词的信息放入到模型中，得到的数据维度将为： (batch_size, seq_length, bemedding_size(d_model))  
 
 > 维度相关信息: batch_size * embedding_size
@@ -370,9 +372,8 @@ $$
 
 ![image-20231022012826489](15_深度学习的经典模型_Transformer.assets/image-20231022012826489.png)
 
-> 从BERT之后，就没有再用sin与cos的方式，是直接变成可训练的形式。该算法了解下即可。
+> 从BERT之后，就没有再用sin与cos的方式，是直接变成可训练的形式。该算法了解下即可。目前目流的位置编码也是由 RePE或AliBi来实现。
 >
-> 目前目流的位置编码也是由 RePE或AliBi来实现。
 
 
 
@@ -1074,7 +1075,7 @@ style G fill:#eee,stroke:#333,stroke-width:1px;
 
 <img src="15_深度学习的经典模型_Transformer.assets/image-20231103020800533.png" alt="image-20231103020800533" style="zoom: 67%;" />
 
->  所以Cross： 即是结合Encoder与Encoder而得到的信息。
+>  所以cross： 即是结合Encoder与Encoder而得到的信息。
 
 
 
